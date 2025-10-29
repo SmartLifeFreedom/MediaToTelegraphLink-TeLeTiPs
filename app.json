@@ -1,37 +1,27 @@
 {
-    "name": "MediaToTelegraphLink",
-    "description": "Powerful Telegram bot to generate Telegraph links for your media files. This bot can works also in group chats.",
-    "repository": "https://github.com/teletips/MediaToTelegraphLink-TeLeTiPs",
-    "keywords": [
-        "telegraph",
-        "telegraph link",
-        "generate telegraph links",
-        "media to telegraph link",
-        "telegram bot to generate telegraph links",
-        "bot to upload media to telegraph",
-        "Telegram bot",
-        "Pyrogram bot"
-    ],
-    "env": {
-        "API_ID": {
-            "description": "Get from my.telegram.org/apps"
-        },
-        "API_HASH": {
-            "description": "Get from my.telegram.org/apps"
-        },
-        "BOT_TOKEN": {
-            "description": "Get from Telegram's @BotFather"
-        }
+  "name": "MediaToTelegramLink",
+  "description": "Telegram bot per generare link Telegraph pubblici da foto o video.",
+  "repository": "https://github.com/tuonome/MediaToTelegramLink",
+  "keywords": ["telegram", "bot", "telegraph", "media"],
+  "env": {
+    "API_ID": {
+      "description": "Ottienilo da https://my.telegram.org/apps",
+      "required": true
     },
-    "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
+    "API_HASH": {
+      "description": "Ottienilo da https://my.telegram.org/apps",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Ottienilo da @BotFather",
+      "required": true
     }
   },
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        }
-    ]
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  },
+  "stack": "heroku-22"
 }
